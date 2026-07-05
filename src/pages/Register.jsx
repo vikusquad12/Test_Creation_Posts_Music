@@ -49,7 +49,7 @@ function Register() {
         <input name="username" placeholder="Name" style={styles.input} disabled={loading} />
         <input name="email" placeholder="Email" style={styles.input} disabled={loading} />
         <input name="password" placeholder="Password" style={styles.input} disabled={loading} />
-        <input name="role" placeholder="Role" style={styles.input} disabled={loading} />
+        <input name="role" placeholder="Role [user / artist]" style={styles.input} disabled={loading} />
 
         <button disabled={loading} style={styles.button}>
           {loading ? "Please wait..." : "Register"}
