@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  min-height: 70px;
+  background: #111827;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  color: #60a5fa;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  transition: 0.25s;
+}
+
+.nav-links a:hover {
+  color: #60a5fa;
+  background: rgba(255,255,255,0.06);
+}
+
+/* Logout Button */
+
+.logout-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.25s;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 18px;
+    gap: 16px;
+    height: auto;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  .logo a {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .nav-links li {
+    flex: 1 1 calc(50% - 12px);
+  }
+
+  .nav-links a,
+  .logout-btn {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 12px;
+  }
+}
+
+/* ================= SMALL PHONES ================= */
+
+@media (max-width: 480px) {
+
+  .nav-links li {
+    flex: 1 1 100%;
+  }
+
+  .logo a {
+    font-size: 22px;
+  }
+
+  .nav-links a,
+  .logout-btn {
+    font-size: 15px;
+  }
+}
+
+/* ================= LOADING SPINNER ================= */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
