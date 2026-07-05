@@ -69,6 +69,7 @@ function CreateMusic() {
           type="file"
           required
           name="music"
+          accept="audio/*"
           style={styles.input}
           required
         />
