@@ -31,7 +31,7 @@ function CreateMusic() {
       }
 
       await axios.post(
-        "http://localhost:3000/api/music/create",
+        `${import.meta.env.VITE_API_URL}/api/music/create`,
         formData,
         {
           withCredentials: true, // ✅ cookie sent automatically

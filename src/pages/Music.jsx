@@ -15,7 +15,7 @@ function Music() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/music/", {
+      .get(`${import.meta.env.VITE_API_URL}/api/music/`, {
         withCredentials: true,
       })
       .then((res) => setMusicList(res.data.musics || []))

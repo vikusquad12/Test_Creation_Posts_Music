@@ -6,7 +6,7 @@ function GetPosts() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/post/", {
+      .get(`${import.meta.env.VITE_API_URL}/api/post/`, {
         withCredentials: true,
       })
       .then((res) => {

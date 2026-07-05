@@ -31,7 +31,7 @@ function CreatePost() {
 
     try {
 
-      await axios.post("http://localhost:3000/api/post/create", formData, { withCredentials: true })
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/post/create`, formData, { withCredentials: true })
       .then( (res)=>{
         alert("Post created successfully");
         e.target.reset();
