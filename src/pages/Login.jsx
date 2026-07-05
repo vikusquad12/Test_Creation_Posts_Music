@@ -17,8 +17,8 @@ function Login() {
     const formData = new FormData(e.target);
 
     const data = {
-      identifier: formData.get("identifier"),
-      password: formData.get("password"),
+      identifier: formData.get("identifier").trim(),
+      password: formData.get("password").trim(),
     };
 
     try {

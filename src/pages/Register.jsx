@@ -20,9 +20,9 @@ function Register() {
     if (role !== "artist") role = "user";
 
     const data = {
-      username: formData.get("username"),
-      email: formData.get("email"),
-      password: formData.get("password"),
+      username: formData.get("username").trim(),
+      email: formData.get("email").toLowerCase().trim(),
+      password: formData.get("password").trim(),
       role,
     };
 
